@@ -1,5 +1,5 @@
 def xo(string)
-  if !string.include?('x') && !string.include?('o')
+  if !string.downcase.include?('x') && !string.downcase.include?('o')
     return true
   else
     array = string.downcase.split("")
