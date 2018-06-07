@@ -1,11 +1,10 @@
-def XO(str)
-
+def xo(string)
+  if !string.include?('x') && !string.include?('o')
+    return true
+  else
+    array = string.downcase.split("")
+    x = array.select {|letter| letter == 'x' }
+    o = array.select {|letter| letter == 'o' }
+    x.count == o.count
+  end
 end
-
-# Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
-
-XO("ooxx") # => true
-XO("xooxx") # => false
-XO("ooxXm") # => true
-XO("zpzpzpp") # => true // when no 'x' and 'o' is present should return true
-XO("zzoo") # => false
